@@ -1,0 +1,55 @@
+<div class="item">
+  <div>Avatar URL</div>
+  <div>
+    <input type="url" name="avatar_url" id="" placeholder="http://" value='{{student.avatar_url}}'>
+  </div>
+</div>
+<div class="item">
+  <div>Nome</div>
+  <div>
+    <input type="text" name="name" id="" placeholder="Nome do Aluno" value='{{student.name}}'>
+  </div>
+</div>
+<div class="item">
+  <div>Email</div>
+  <div>
+    <input type="email" name="email" id="" placeholder="Email do aluno" value='{{student.email}}'>
+  </div>
+</div>
+
+<div class="item">
+  <div>Telefone de Contato</div>
+  <div>
+    <input type="number" name="cellphone" id="" placeholder="Telefone do aluno" value='{{student.phone}}'>
+  </div>
+</div>
+
+<div class="item">
+  <div>Data de Nascimento</div>
+  <div>
+    <input type="date" name="birth" id="" value='{{student.birth}} '>
+  </div>
+</div>
+
+<div class="item">
+  <div>Sexo</div>
+  <div>
+    <span><input type="radio" name="gender" value="M" id="" {% if student.gender =="M" %} checked="checked" {% endif %}>Masculino</span>
+    <span><input type="radio" name="gender" value="F" id="" {% if student.gender =="F" %} checked="checked" {% endif %}>
+      Feminino</span>
+  </div>
+
+</div>
+<div class="item">
+  <div>Curso</div>
+  <div>
+    <select name="year" id="year">
+      <option value="Contabilidade" {% if student.blood == "Contabilidade" %} selected="selected" {%endif%}>Contabilidade</option>
+      <option value="Direito" {% if student.blood == "Direito" %} selected="selected" {%endif%}>Direito</option>
+      <option value="Licenciatura" {% if student.blood == "Licenciatura" %} selected="selected" {%endif%}>Licenciatura</option>
+      <option value="Engenharia" {% if student.blood == "Engenharia" %} selected="selected" {%endif%}>Engenharia</option>
+    </select>
+  </div>
+</div>
+
+<button type="submit">Salvar</button>

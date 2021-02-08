@@ -1,0 +1,36 @@
+<div class="item">
+  <div>Avatar URL</div>
+  <div>
+    <input type="url" name="avatar_url" id="" placeholder="http://" value='{{teacher.avatar_url}}'>
+  </div>
+</div>
+<div class="item">
+  <div>Professor</div>
+  <div>
+    <input type="text" name="name" id="" placeholder="Nome do professor" value='{{teacher.name}}'>
+  </div>
+</div>
+<div class="item">
+  <div>Data de Nascimento</div>
+  <div>
+    <input type="text" name="birth" id="" value='{{teacher.birth}} '>
+  </div>
+</div>
+<div class="item">
+  <div>Sexo</div>
+  <div>
+    <span><input type="radio" name="gender" value="M" id="" {% if teacher.gender =="M" %} checked="checked" {% endif %}>Masculino</span>
+    <span><input type="radio" name="gender" value="F" id="" {% if teacher.gender =="F" %} checked="checked" {% endif %}>
+      Feminino</span>
+  </div>
+
+</div>
+</div>
+<div class="item">
+<div>Matérias Ministradas</div>
+<div>
+  <input type="text" name="services" placeholder="Separe os serviços por vírgula" value='{{teacher.services}}'>
+</div>
+</div>
+
+<button type="submit">Salvar</button>
